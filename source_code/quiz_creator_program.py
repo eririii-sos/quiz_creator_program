@@ -10,3 +10,9 @@ import os
 
 # Initialize colorama
 init(autoreset=True)
+
+# Add title banner for Quiz Creator 
+def title_banner():
+    print(Fore.MAGENTA + "=" * 50)
+    print(Fore.WHITE + Style.BRIGHT + "🧠  Welcome to the Quiz Creator! 🧠")
+    print(Fore.MAGENTA + "=" * 50)
