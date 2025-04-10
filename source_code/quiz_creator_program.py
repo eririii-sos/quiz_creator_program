@@ -32,3 +32,8 @@ def main():
         while True:
             print(Back.YELLOW + Fore.WHITE + Style.BRIGHT + "\n➤  Enter a new question")
             question = get_input("Question: ")
+
+            a = get_input("Option a: ")
+            b = get_input("Option b: ")
+            c = get_input("Option c: ")
+            d = get_input("Option d: ")
