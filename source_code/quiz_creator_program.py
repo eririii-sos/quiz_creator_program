@@ -46,11 +46,20 @@ def main():
                 if correct not in ['a', 'b', 'c', 'd']: # Error handling in case of invalid input
                     print(Fore.RED + "Invalid! Please enter only 'a', 'b', 'c', or 'd'.")    
 
-            # Store input data to text file
+            # Store input data into the text file
             file.write("Question: " + question + "\n")
             file.write("   a) " + a + "\n")
             file.write("   b) " + b + "\n")
             file.write("   c) " + c + "\n")
             file.write("   d) " + d + "\n")
             file.write("Correct Answer: " + correct + "\n")
-            file.write("─" * 50 + "\n")
+            file.write("-" * 50 + "\n")
+
+            # Ask user for a new set of question and answers until satisfied
+            new_question = get_input("\n+ Add another question? (yes/no): ").strip().lower()
+            if new_question != "yes":
+                print(Fore.GREEN + "\n🎉 All done! Your questions are saved in " + file_name)
+                break
+
+if __name__ == "__main__":
+    main()
