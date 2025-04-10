@@ -5,3 +5,8 @@
 # (Optional) Install colorama in your local device for text customization ('pip install colorama')
 
 # Import dependencies
+from colorama import init, Fore, Style
+import os
+
+# Initialize colorama
+init(autoreset=True)
