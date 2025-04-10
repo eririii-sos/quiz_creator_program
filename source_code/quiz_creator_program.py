@@ -27,13 +27,16 @@ def main():
     os.system("cls" if os.name == "nt" else "clear")
 
     title_banner()
-
+ 
     with open(file_name, "a") as file:
         while True:
             print(Back.YELLOW + Fore.WHITE + Style.BRIGHT + "\n➤  Enter a new question")
-            question = get_input("Question: ")
+            question = get_input("Question: ") # Ask for user's question input
 
+            # Ask for user's input for possible answers
             a = get_input("Option a: ")
             b = get_input("Option b: ")
             c = get_input("Option c: ")
             d = get_input("Option d: ")
+
+            # Finalize correct answer from choices
