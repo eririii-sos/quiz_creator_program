@@ -44,4 +44,13 @@ def main():
             while correct not in ['a', 'b', 'c', 'd']:
                 correct = get_input("Enter correct answer (a/b/c/d): ").lower() # Ask user to enter correct answer
                 if correct not in ['a', 'b', 'c', 'd']: # Error handling in case of invalid input
-                    print(Fore.RED + "Invalid! Please enter only 'a', 'b', 'c', or 'd'.")          
+                    print(Fore.RED + "Invalid! Please enter only 'a', 'b', 'c', or 'd'.")    
+
+            # Store input data to text file
+            file.write("Question: " + question + "\n")
+            file.write("   a) " + a + "\n")
+            file.write("   b) " + b + "\n")
+            file.write("   c) " + c + "\n")
+            file.write("   d) " + d + "\n")
+            file.write("Correct Answer: " + correct + "\n")
+            file.write("─" * 50 + "\n")
