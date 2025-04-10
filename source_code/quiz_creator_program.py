@@ -33,10 +33,15 @@ def main():
             print(Back.YELLOW + Fore.WHITE + Style.BRIGHT + "\n➤  Enter a new question")
             question = get_input("Question: ") # Ask for user's question input
 
-            # Ask for user's input for possible answers
+            # Ask for user's input of possible answers
             a = get_input("Option a: ")
             b = get_input("Option b: ")
             c = get_input("Option c: ")
             d = get_input("Option d: ")
 
-            # Finalize correct answer from choices
+            # Finalize correct answer from options
+            correct = ""
+            while correct not in ['a', 'b', 'c', 'd']:
+                correct = get_input("Enter correct answer (a/b/c/d): ").lower() # Ask user to enter correct answer
+                if correct not in ['a', 'b', 'c', 'd']: # Error handling in case of invalid input
+                    print(Fore.RED + "Invalid! Please enter only 'a', 'b', 'c', or 'd'.")          
