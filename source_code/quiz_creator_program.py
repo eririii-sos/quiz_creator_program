@@ -16,3 +16,7 @@ def title_banner():
     print(Fore.MAGENTA + "=" * 50)
     print(Fore.WHITE + Style.BRIGHT + "🧠  Welcome to the Quiz Creator! 🧠")
     print(Fore.MAGENTA + "=" * 50)
+
+# Initialized prompt customization
+def get_input(prompt, color=Fore.YELLOW):
+    return input(color + prompt + Fore.RESET)
